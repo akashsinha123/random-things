@@ -1,0 +1,318 @@
+look here
+
+
+
+angular —> apply , digest
+angularjs best practices
+export bookmarks
+add github link to resume
+Upload old ConnectMantra
+Explore Github for angularness, php projects;
+Explore Auth0;
+socketio
+pagination on both ends
+$http service
+when to use scope.variables and when to use variables;
+what is public key?? ask naval for assess to Balloon Blaster;
+strict mode in JS
+explain the role of deferred scripts in JS
+lazy loading-> the query is fired from the view templates . thus it was lazy and waited to be executed until we actually needed that data.
+rest API’s.
+understand narvi.
+export everything from phpMyAdmin
+
+
+http://angularjs.org
+http://builteith.angularjs.org
+http://angular-ui.github.io
+http://mgcrea.github.io/angular-strap
+http://pluralsight.com
+
+A model is responsible for managing data, storing and retrieving entities and containing business logic.
+
+active menu selection;
+
+Stoyan Cheresharov for zend
+
+**Object relational mapping => Martin fower- patterns for enterprise application archetecture-> tabledatagateway, rowdatagateway, activerecord and datamapper;** https://www.youtube.com/watch?v=OYkVHiXeGeY **around 28 min
+
+things I'm unaware of:
+Your Apache installation must have the mod_rewrite extension installed and configured.
+
+sidebar box list
+
+I'm a freelance web developer based in Santa Monica, California. I've been in business since 2006 and work mainly with design agencies.
+
+While I specialize in front-end development and WordPress, I now also do a lot of work in mobile web and responsive development.
+
+
+
+
+
+ <option ng-repeat="lang in allLanguages" value="{{lang}}">{{lang.name}}</option>
+
+
+
+
+
+ALTER TABLE user_language_relation
+
+ADD CONSTRAINT lang_lang_constraint
+
+FOREIGN KEY (user_id)
+
+REFERENCES users(id)
+
+ON DELETE RESTRICT
+
+ON UPDATE CASCADE
+
+
+
+
+
+in  lang_project_relation : only project_project_relation is defined,, lang_project_relation threw some error;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2
+3
+4
+5
+CONSTRAINT constraint_name
+FOREIGN KEY foreign_key_name (columns)
+REFERENCES parent_table(columns)
+ON DELETE action
+ON UPDATE action
+
+
+
+
+SELECT user.name, course.name
+FROM `user`
+INNER JOIN `course` on user.course = course.id;
+SELECT * FROM questions INNER JOIN `answers` on questions.id = answers.ques_id
+
+
+// row count: SELECT COUNT(ques_id) count FROM (questions INNER JOIN `answers` on questions.id = answers.ques_id) GROUP BY ques_id HAVING count > 0
+
+
+//Wrong query: select count(ques_id) c from FROM questions INNER JOIN `answers` on questions.id = answers.ques_id group by ques_id having c > 0
+
+select * from (bdg left join res on bdg.bid = res.bid) left join dom on res.rid = dom.rid; 
+
+
+select * from (users left join user_language_relation on users.id = user_language_relation.user_id) left join language on user_language_relation.language_id = language.lang_id;
+
+select user_language_relation.id, lang_name from (users left join user_language_relation on users.id = user_language_relation.user_id) left join language on user_language_relation.language_id = language.lang_id;
+
+
+
+select * from (users left join user_project_relation on users.id = user_project_relation.user_id) left join projects on user_project_relation.project_id = projects.project_id;
+
+select seq_no, project_name from (users left join user_project_relation on users.id = user_project_relation.user_id) left join projects on user_project_relation.project_id = projects.project_id WHERE users.id = 1
+
+
+select * from (language left join user_language_relation on language.lang_id = user_language_relation.language_id) left join users on user_language_relation.user_id = users.id;
+
+
+select * from (projects left join user_project_relation on projects.project_id = user_project_relation.project_id) left join users on user_project_relation
+.user_id = users.id;
+
+
+
+select * from (blogs left join user_blog_relation on blogs.id = user_blog_relation.blog_id) left join users on user_blog_relation.user_id = users.id;
+
+
+
+
+SELECT * FROM User where id NOT IN
+(SELECT id FROM User
+ left join UserCourse on User.id = UserCourse.fkStudentId
+ where UserCourse.fkCourseId = 1 and u.fkRoleId = 3);
+ 
+
+INSERT INTO `user_blog_relation`(`user_id`,`blog_id`) VALUES ('2', 'SELECT MAX(`id`) FROM blogs')
+
+
+
+
+
+UPDATE language
+SET    lang_desc = 'Dummy Description';
+
+
+
+
+
+
+
+INSERT INTO `user_blog_relation`(`user_id`,`blog_id`) VALUES ('2', 'SELECT max(id) FROM blogs' + 1 )
+
+INSERT INTO user_blog_relation (user_id, blog_id)  
+SELECT user_id, blog_id, received_msg, date_received
+  FROM `received_txts`
+ WHERE `campaign_id` = '8'
+
+
+
+SELECT MAX(`id`) FROM `blogs`
+
+
+
+to get tags 
+select language.lang_id, lang_name from (questions left join question_lang_relation on questions.id = question_lang_relation.ques_id) left join language on question_lang_relation.lang_id = language.lang_id WHERE questions.id = 1
+select language.lang_id, lang_name, question_lang_relation.ques_id from (questions left join question_lang_relation on questions.id = question_lang_relation.ques_id) left join language on question_lang_relation.lang_id = language.lang_id
+
+
+
+
+SELECT * FROM answerComments WHERE id IN (2, 5, 11);
+
+
+
+
+
+
+
+https://github.com/auth0/angular-webinar-sample
+
+Auth0  domain name: angularrises.auth0.com
+
+
+
+new Gmail details;
+sinha.akash3lpm@gmail.com
+
+
+
+
+step 5:
+Tag Instance:
+Name: connectMantra
+
+
+Step 6:
+
+Security Group Name: test connectMantra
+Description: test ec2 instance for launching connectMantra
+
+Key pair name: connectMantra
+
+The following instance launches have been initiated: i-827c8c4d View launch log
+
+for ubunu: the user is ubuntu;
+
+ubuntu@ip-172-31-19-54:~$
+
+installing latest version of php apache and mysql on ubuntu amazon ec2
+
+You should replace this file (located at /var/www/html/index.html) before continuing to operate your HTTP server.
+
+The configuration system is fully documented in /usr/share/doc/apache2/README.Debian.gz.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________
+
+new Instance:
+
+step:5 Tag Instance:
+key:Name, Value:testing
+
+Step 6: Configure Security Group
+
+Security group name: My Website;
+Description: My Website Security Group;
+
+
+
+A RDS:
+
+phpMyAdmin;
+
+Database Name: connectMantra;
+
+
+last attempt:
+connectMantra
+
+
+
+
+
+
+
+DB Instance Identifier*
+
+Specify a name that is unique for all DB instances owned by your AWS account in the current region. DB instance identifier is case insensitive, but stored as all lower-case, as in "mydbinstance". Learn More.
+Master Username*
+
+Specify an alphanumeric string that defines the login ID for the master user. You use the master user login to start defining all users, objects, and permissions in the databases of your DB instance. Master Username must start with a letter, as in "awsuser".
+Master Password* : bickubicku
+
+Specify a string that defines the password for the master user. Master Password must be at least eight characters long, as in "mypassword".
+Confirm Password*
+: bickubicku
+
+
+
+
+
+
+
+
+final try:
+
+akashMantra
+
+
+security group:
+Wide Open Wide Open
+
+chown -R ubuntu /var/www  for filezilla
+
+chmod 400 mykey.pem for instances key;
+
+
+
+
+
+
+
+
+PSD: Image extraction and grouping ;
+
+ctrl + GEACN (enter) S
+
+right click-> duplicate layer -> new document -> ok, file-> save as;
+
+ctrl+J -> ctrl+J
+
+
+
+
+
+Git commands:
+
+
+git status
+
+git add -A
+
+git commit -a -m "My first commit”  
+
+git push or git push -u origin master or git push -u origin master
+
+  
+
+
