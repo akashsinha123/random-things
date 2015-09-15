@@ -2,6 +2,14 @@ look here
 
 
 
+filter: inn input-> ng-model="search.$"  :) ;
+angular.element;
+angular.bootstrap;
+TLS-> Transport Layer Security;
+SSL-> Secure Socket Layer;
+more on promise chain
+$httpProvider.responseInterceptors
+routeChangeStart;
 angular —> apply , digest
 angularjs best practices
 export bookmarks
@@ -20,6 +28,14 @@ lazy loading-> the query is fired from the view templates . thus it was lazy and
 rest API’s.
 understand narvi.
 export everything from phpMyAdmin
+
+
+
+
+
+Element Directives: Which ever directive ends first gets executed first:
+main logic: In the life-process of the angularjs it first goes through thr DOM of the directives , then their respective controllers if any, and then through their link functions;
+
 
 
 http://angularjs.org
@@ -46,6 +62,17 @@ I'm a freelance web developer based in Santa Monica, California. I've been in bu
 While I specialize in front-end development and WordPress, I now also do a lot of work in mobile web and responsive development.
 
 
+
+
+
+
+
+
+
+
+
+goood Links:
+awesome site: http://www.bennadel.com/blog/2777-monitoring-http-activity-with-http-interceptors-in-angularjs.htm ;
 
 
 
