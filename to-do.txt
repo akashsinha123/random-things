@@ -30,11 +30,24 @@ understand narvi.
 export everything from phpMyAdmin
 
 
+Interview Questions:
+given a random website. what will be your aproach to speed its performance;
+difference between a directives controller and the link function;
+limit of a browser to send multiple requests at a time;
+fetching data from a single domain is better or multiple domains;
+bad practices vs good practices angularjs;
+how to render HTML response;
+why sholudnt we use rootScope for all purposes;
 
 
+
+NOTES:
 
 Element Directives: Which ever directive ends first gets executed first:
 main logic: In the life-process of the angularjs it first goes through thr DOM of the directives , then their respective controllers if any, and then through their link functions;
+
+Controllers in a directive holds functions or methods that the inner(child) elements can call.
+
 
 
 
@@ -341,5 +354,49 @@ git commit -a -m "My first commit”
 git push or git push -u origin master or git push -u origin master
 
   
+
+
+
+
+52.76.51.35     connect.mantralabsglobal.com
+
+
+
+
+
+
+
+
+
+Git commands for live server:
+root@ip-172-31-23-230:/var/www/html# sudo /etc/apache2/sites-available/
+sudo: /etc/apache2/sites-available/: command not found
+root@ip-172-31-23-230:/var/www/html# sudo vim /etc/apache2/sites-available/
+root@ip-172-31-23-230:/var/www/html# sudo vim /etc/apache2/sites-available
+root@ip-172-31-23-230:/var/www/html# sudo vim /etc/apache2/sites-available/
+000-default.conf  default-ssl.conf  
+root@ip-172-31-23-230:/var/www/html# sudo vim /etc/apache2/sites-available/
+000-default.conf  default-ssl.conf  
+root@ip-172-31-23-230:/var/www/html# sudo vim /etc/apache2/sites-available/000-default.conf 
+root@ip-172-31-23-230:/var/www/html# cd /etc/apache2/sites-enabled/
+root@ip-172-31-23-230:/etc/apache2/sites-enabled# ls -al
+total 8
+drwxr-xr-x 2 root root 4096 Sep 10 21:00 .
+drwxr-xr-x 8 root root 4096 Sep 10 20:58 ..
+lrwxrwxrwx 1 root root   35 Sep 10 20:58 000-default.conf -> ../sites-available/000-default.conf
+root@ip-172-31-23-230:/etc/apache2/sites-enabled# sudo service apache2 restart
+ * Restarting web server apache2                                                                                                                                                                        AH00112: Warning: DocumentRoot [/var/www/html/connectMantra/dist] does not exist
+                                                                                                                                                                                                 [ OK ]
+root@ip-172-31-23-230:/etc/apache2/sites-enabled# cd /var/www/html/
+root@ip-172-31-23-230:/var/www/html# ls
+abc.html  connectMantra  delete.php  index.html
+root@ip-172-31-23-230:/var/www/html# cd connectMantra/
+root@ip-172-31-23-230:/var/www/html/connectMantra# ls
+Gruntfile.js  README.md  app  bower.json  bower_components  connectMantra.pem  myMantra.pem  package.json  phpMyAdmin.pem  test
+root@ip-172-31-23-230:/var/www/html/connectMantra# grunt build
+No command 'grunt' found, did you mean:
+ Command 'grun' from package 'grun' (universe)
+grunt: command not found
+root@ip-172-31-23-230:/var/www/html/connectMantra# npm install grunt-cli
 
 
