@@ -14,6 +14,7 @@ angular —> apply , digest
 angularjs best practices
 export bookmarks
 add github link to resume
+learn git in your free time
 Upload old ConnectMantra
 Explore Github for angularness, php projects;
 Explore Auth0;
@@ -353,7 +354,14 @@ git commit -a -m "My first commit”
 
 git push or git push -u origin master or git push -u origin master
 
+
+importing a database;
+
+mysql -u root -p connectMantra < /Users/sudhakarponnusamy/Downloads/connectMantra.sql
+
   
+
+sudo nano /etc/hosts
 
 
 
@@ -398,5 +406,7 @@ No command 'grunt' found, did you mean:
  Command 'grun' from package 'grun' (universe)
 grunt: command not found
 root@ip-172-31-23-230:/var/www/html/connectMantra# npm install grunt-cli
+
+
 
 
